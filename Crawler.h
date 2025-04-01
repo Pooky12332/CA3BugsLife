@@ -4,47 +4,53 @@
 #include <list>
 
 using namespace std;
-
+// Position struct
 struct Position {
 	int x;
 	int y;
+};
+
+enum class Direction {
+	North = 1,
+	East = 2,
+	South = 3,
+	West = 4
 };
 
 class Crawler {
 	private:
 		int id;
 		Position position;
-		int direction;
+		Direction direction;
 		int size;
 		bool alive;
 		list<Position> path;
 
 	public:
 		// Constructors
-		Crawler();
-		Crawler(int id, Position position, int direction, int size, bool alive, list<Position> path);
+		Crawler(int id, Position position, Direction direction, int size, bool alive, list<Position> path);
 
 		// Deconstructors
-		~Crawler();
+		~Crawler() {};
+
+		// Methods
+		void move();
+		bool isWayBlocked();
 
 		// Getters
-		int getId();
-		Position getPosition();
-		int getDirection();
-		int getSize();
-		bool isAlive();
-		list<Position> getPath();
+		int getId() const;
+		Position getPosition() const;
+		Direction getDirection() const;
+		int getSize() const;
+		bool isAlive() const;
+		list<Position> getPath() const;
 
 		// Setters
 		void setId(int id);
 		void setPosition(Position position);
-		void setDirection(int direction);
+		void setDirection(Direction direction);
 		void setSize(int size);
 		void setAlive(bool alive);
-		void setPath(list<Position> path);
-
-		// Methods
-
 };
 
 #endif //CRAWLER_H

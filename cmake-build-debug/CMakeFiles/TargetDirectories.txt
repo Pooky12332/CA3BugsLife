@@ -1,3 +1,3 @@
-C:/Users/pooky/Documents/College/YearTwo/CPP/CA3BugsLife/cmake-build-debug/CMakeFiles/CA3BugsLife.dir
-C:/Users/pooky/Documents/College/YearTwo/CPP/CA3BugsLife/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/pooky/Documents/College/YearTwo/CPP/CA3BugsLife/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+O:/College/YearTwo/Cpp/Projects/CA3BugsLife/cmake-build-debug/CMakeFiles/CA3BugsLife.dir
+O:/College/YearTwo/Cpp/Projects/CA3BugsLife/cmake-build-debug/CMakeFiles/edit_cache.dir
+O:/College/YearTwo/Cpp/Projects/CA3BugsLife/cmake-build-debug/CMakeFiles/rebuild_cache.dir
