@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(CA3BugsLife main.cpp
         Crawler.h
         Crawler.cpp
+        Board.cpp
+        Board.h
 )

@@ -18,39 +18,39 @@ enum class Direction {
 };
 
 class Crawler {
-	private:
-		int id;
-		Position position;
-		Direction direction;
-		int size;
-		bool alive;
-		list<Position> path;
+private:
+	int id;
+	Position position;
+	Direction direction;
+	int size;
+	bool alive;
+	list<Position> path;
 
-	public:
-		// Constructors
-		Crawler(int id, Position position, Direction direction, int size, bool alive, list<Position> path);
+public:
+	// Constructors
+	Crawler(int id, Position position, Direction direction, int size, bool alive, list<Position> path);
 
-		// Deconstructors
-		~Crawler() {};
+	// Deconstructors
+	~Crawler() {};
 
-		// Methods
-		void move();
-		bool isWayBlocked();
+	// Methods
+	void move();
+	bool isWayBlocked();
 
-		// Getters
-		int getId() const;
-		Position getPosition() const;
-		Direction getDirection() const;
-		int getSize() const;
-		bool isAlive() const;
-		list<Position> getPath() const;
+	// Getters
+	int getId() const;
+	Position getPosition() const;
+	Direction getDirection() const;
+	int getSize() const;
+	bool isAlive() const;
+	list<Position> getPath() const;
 
-		// Setters
-		void setId(int id);
-		void setPosition(Position position);
-		void setDirection(Direction direction);
-		void setSize(int size);
-		void setAlive(bool alive);
+	// Setters
+	void setId(int id);
+	void setPosition(Position position);
+	void setDirection(Direction direction);
+	void setSize(int size);
+	void setAlive(bool alive);
 };
 
 #endif //CRAWLER_H
