@@ -10,7 +10,7 @@ struct Position {
 	int y;
 };
 
-enum class Direction {
+enum Direction {
 	North = 1,
 	East = 2,
 	South = 3,

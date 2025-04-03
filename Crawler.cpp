@@ -1,18 +1,20 @@
-#include "Crawler.h";
+#include "Crawler.h"
 
 using namespace std;
 
-Crawler::Crawler(int id, Position position, Direction direction, int size, bool alive, list<Position> path) : id(id), position(position), direction(direction), alive(true), path(path) {};
+// Constructor
+Crawler::Crawler(int id, Position position, Direction direction, int size, bool alive, list<Position> path) : id(id), position(position), direction(direction), size(size), alive(alive), path(path) {};
 
+// Methods
 // TODO Alive check for movement
 // TODO IsBlocked check for movement
 
 void Crawler::move() {
     switch (direction) {
-        case Direction::North: position.y += 1; break;
-        case Direction::East: position.x += 1; break;
-        case Direction::South: position.y -= 1; break;
-        case Direction::West: position.x -= 1; break;
+        case North: position.y += 1; break;
+        case East: position.x += 1; break;
+        case South: position.y -= 1; break;
+        case West: position.x -= 1; break;
     }
 
     // Adding our movement to our path list
@@ -23,10 +25,10 @@ bool Crawler::isWayBlocked() {
     // Assuming that 0 to 9 is our 10 grid places, meaning that they are the limit values
     // If no direction is at limit, then we return false
     switch (direction) {
-        case Direction::North: return position.y == 0;
-        case Direction::East: return position.x == 0;
-        case Direction::South: return position.y == 9;
-        case Direction::West: return position.x == 9;
+        case North: return position.y == 0;
+        case East: return position.x == 0;
+        case South: return position.y == 9;
+        case West: return position.x == 9;
         default: return false;
     }
 }
