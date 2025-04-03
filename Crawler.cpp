@@ -1,15 +1,20 @@
 #include "Crawler.h"
 
+#include <stdlib.h>
+
 using namespace std;
 
 // Constructor
 Crawler::Crawler(int id, Position position, Direction direction, int size, bool alive, list<Position> path) : id(id), position(position), direction(direction), size(size), alive(alive), path(path) {};
 
 // Methods
-// TODO Alive check for movement
-// TODO IsBlocked check for movement
-
 void Crawler::move() {
+    // Check if the bug is at an edge
+    while (isWayBlocked()) {
+        direction = static_cast<Direction> ((rand() % 4) + 1);
+    }
+
+    // Make our movement
     switch (direction) {
         case North: position.y += 1; break;
         case East: position.x += 1; break;
@@ -25,10 +30,10 @@ bool Crawler::isWayBlocked() {
     // Assuming that 0 to 9 is our 10 grid places, meaning that they are the limit values
     // If no direction is at limit, then we return false
     switch (direction) {
-        case North: return position.y == 0;
-        case East: return position.x == 0;
-        case South: return position.y == 9;
-        case West: return position.x == 9;
+        case North: return position.y == 9;
+        case East: return position.x == 9;
+        case South: return position.y == 0;
+        case West: return position.x == 0;
         default: return false;
     }
 }

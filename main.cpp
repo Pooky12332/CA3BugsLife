@@ -6,5 +6,11 @@ using namespace std;
 int main() {
     Board board;
     board.init();
-    board.displayAll();
+    board.findById(101);
+    board.tap();
+    board.findById(101);
+    board.tap();
+    board.findById(101);
+    board.tap();
+    board.findById(101);
 }

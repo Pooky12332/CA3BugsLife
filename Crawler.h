@@ -31,7 +31,7 @@ public:
 	Crawler(int id, Position position, Direction direction, int size, bool alive, list<Position> path);
 
 	// Deconstructors
-	~Crawler() {};
+	~Crawler();
 
 	// Methods
 	void move();

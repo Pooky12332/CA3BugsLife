@@ -18,7 +18,7 @@ public:
     // Methods
     void init(); // Feature 1
     void displayAll(); // Feature 2
-    void findById(); // Feature 3
+    void findById(int id); // Feature 3
     void tap(); // Feature 4
 };
 
