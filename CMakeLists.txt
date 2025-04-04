@@ -8,4 +8,6 @@ add_executable(CA3BugsLife main.cpp
         Crawler.cpp
         Board.cpp
         Board.h
+        Util.cpp
+        Util.h
 )

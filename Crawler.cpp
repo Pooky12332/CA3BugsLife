@@ -1,11 +1,14 @@
 #include "Crawler.h"
-
 #include <stdlib.h>
 
 using namespace std;
 
 // Constructor
 Crawler::Crawler(int id, Position position, Direction direction, int size, bool alive, list<Position> path) : id(id), position(position), direction(direction), size(size), alive(alive), path(path) {};
+
+// Deconstructor
+Crawler::~Crawler() {}
+
 
 // Methods
 void Crawler::move() {
