@@ -8,4 +8,5 @@ using namespace std;
 
 string getDirecName(Direction direction);
 
+
 #endif // UTIL_H

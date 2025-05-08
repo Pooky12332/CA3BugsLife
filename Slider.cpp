@@ -1,21 +1,24 @@
-#include "Crawler.h"
-#include "Bug.h"
+#include "Slider.h"
 #include <stdlib.h>
 #include <cstdlib>
 
 using namespace std;
 
 // Constructor
-Crawler::Crawler(int id, Position position, Direction direction, int size, bool alive) : Bug(id, position, direction, size, alive) {};
+Slider::Slider(int id, Position position, Direction direction, int size, bool alive) : Bug(id, position, direction, size, alive) {}
 
 // Deconstructor
-Crawler::~Crawler() {}
+Slider::~Slider() {}
 
 // Methods
-void Crawler::move() {
-	// Check if the bug is at an edge, if it is, pick a random direction
+void Slider::move() {
+	// Always set a new direction at random
+	Direction newDirection = static_cast<Direction> ((rand() % 4) + 1);
+	setDirection(newDirection);
+
+	// Check to see if thats blocked and if it is, then set a new direction
 	while (isWayBlocked()) {
-		Direction newDirection = static_cast<Direction> ((rand() % 4) + 1);
+		newDirection = static_cast<Direction> ((rand() % 4) + 1);
 		setDirection(newDirection);
 	}
 
@@ -33,4 +36,4 @@ void Crawler::move() {
 	// Update the position and lists
 	setPosition(pos);
 	getPath().push_back(pos);
-};
+}

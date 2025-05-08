@@ -10,4 +10,19 @@ add_executable(CA3BugsLife main.cpp
         Board.h
         Util.cpp
         Util.h
+        Bug.cpp
+        Bug.h
+        Hopper.cpp
+        Hopper.h
+        GUI.cpp
+        GUI.h
+        Slider.cpp
+        Slider.h
 )
+
+set(SFML_STATIC_LIBRARIES TRUE)
+set(SFML_DIR C:/SFML-2.5.1/lib/cmake/SFML)
+find_package(SFML COMPONENTS system window graphics audio network REQUIRED)
+
+include_directories(C:/SFML-2.5.1/include)
+target_link_libraries(CA3BugsLife sfml-system sfml-window sfml-graphics sfml-audio)
